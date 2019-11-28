@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SENSOR</title>
+
+    <!-- Bootstrap CSS / Color Scheme -->
+    <link rel="stylesheet" href="https://2019.igem.org/Team:TJUSLS_China/improve/defaultcss?action=raw&ctype=text/css"
+        id="theme-color">
+    <link rel="stylesheet" type="text/css"
+        href="https://2019.igem.org/Team:TJUSLS_China/assets/vendors/wow/animatecss?action=raw&ctype=text/css">
+    <style type="text/css">
+        /*下面contactus*/
+        .footer {
+            background-color: #222222;
+            color: #fff;
+            font-family: verdana;
+            width: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 1.5% 0 3% 0;
+            text-align: center;
+            position: relative;
+            z-index: 100;
+        }
+
+        #hui1 {
+            position: absolute;
+            right: 0;
+            top: 20%;
+            width: 30%;
+            z-index: 999;
+        }
+
+        #xiaohui {
+            width: 40%;
+
+        }
+
+        #yuanhui {
+            width: 34%;
+        }
+
+        #hui2 {
+            position: absolute;
+            left: 0;
+            top: 28%;
+            width: 38%;
+            z-index: 999;
+        }
+
+        .ctus {
+            width: 25%;
+            margin: 5px;
+            float: left;
+        }
+
+        .ctus img {
+            width: 10%;
+            height: 10%;
+            border-radius: 0;
+            margin: 5px auto;
+        }
+
+        .ctus img:hover {
+            transform: scale(1.2, 1.2);
+        }
+
+        .enlarge:hover {
+            transform: scale(1.15, 1.15);
+        }
+
+        .enlarge {
+            background-color: #353535;
+            border: none;
+        }
+    </style>
+    <script type="text/javascript">
+        function loadXMLDoc() {
+            var xmlhttp;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            }
+            else {// code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET", "/temp", true);
+            xmlhttp.send();
+        }
+
+        function loadXMLDoc1() {
+            var xmlhttp;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            }
+            else {// code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("myDiv1").innerHTML = xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET", "/humi", true);
+            xmlhttp.send();
+        }
+
+        function loadXMLDoc2() {
+            var xmlhttp;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            }
+            else {// code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("myDiv2").innerHTML = xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET", "/meth", true);
+            xmlhttp.send();
+        }
+
+        function loadXMLDoc3() {
+            var xmlhttp;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            }
+            else {// code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("myDiv3").innerHTML = xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET", "/light", true);
+            xmlhttp.send();
+        }
+    </script>
+</head>
+
+<body>
+    <div id="main" class="fixed">
+        <section class="py-7 py-md-0 bg-hero"
+            style="background-image: url(https://2019.igem.org/wiki/images/4/48/T--TJUSLS_China--sensor.jpg)" id="home">
+            <div class="container">
+                <div class="row vh-md-100">
+                    <div class="col-md-7 mx-auto my-auto text-center">
+                        <h1 style="color: white;font-size:70px;border: none;">Wireless sensor</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="cover-arrow bounce d-none d-md-block">
+                <a href="#process" class="page-scroll"><em class="text-white" data-feather="chevrons-down"></em></a>
+            </div>
+        </section>
+
+        <br />
+
+        <section class="py-7" id="process">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 mx-auto ">
+                        <br />
+                        <p class="lead text-muted">
+                            <button class="enlarge" type="button" onclick="loadXMLDoc()"
+                                style="color:#fff;font-size: 24px;">Temp sensor</button>
+                            <div id="myDiv"></div>
+                        </p>
+                        <br />
+                        <p class="lead text-muted">
+                            <button class="enlarge" type="button" onclick="loadXMLDoc1()"
+                                style="color:#fff;font-size: 24px;">Humi sensor</button>
+                            <div id="myDiv1"></div>
+                        </p>
+                        <br />
+                        <p class="lead text-muted">
+                            <button class="enlarge" type="button" onclick="loadXMLDoc2()"
+                                style="color:#fff;font-size: 24px;">Meth sensor</button>
+                            <div id="myDiv2"></div>
+                        </p>
+                        <br />
+                        <p class="lead text-muted">
+                            <button class="enlarge" type="button" onclick="loadXMLDoc3()"
+                                style="color:#fff;font-size: 24px;">Light sensor</button>
+                            <div id="myDiv3"></div>
+                        </p>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- contactus -->
+        <div class="footer" id="contactus">
+            <div id="hui1">
+                <img id="xiaohui" src="https://2019.igem.org/wiki/images/f/f6/T--TJUSLS_China--Attr-5%282%29.png"
+                    alt="">
+            </div>
+            <div id="hui2">
+                <img id="yuanhui" src="https://2019.igem.org/wiki/images/d/de/T--TJUSLS_China--sensor1.png" alt="">
+            </div>
+            <div class="ctu" align="center">
+                <h5 style="font-weight: bold;color:white">CONTACT US</h5>
+                <hr width="50%">
+            </div>
+            <div style="margin: 0 auto;">
+                <div class="ctus" style="text-align: center">
+
+                </div>
+                <div class="ctus" style="word-wrap:break-word;">
+                    <p style="text-align: center;">
+                        <img src="https://2019.igem.org/wiki/images/b/b8/T--TJUSLS_China--Attr-email.png"
+                            alt="">&nbsp;&nbsp;EMAIL
+                        <br />yanxingLiu@tju.edu.cn<br />
+                        zhangyating@tju.edu.cn<br />
+                        booker@tju.edu.cn
+                    </p>
+                </div>
+                <div class="ctus" style="word-wrap:break-word;">
+                    <p style="text-align: center;">
+                        <img src="https://2019.igem.org/wiki/images/4/4c/T--TJUSLS_China--Attr-addressl.png"
+                            alt="">&nbsp;&nbsp;ADDRESS
+                        <br />
+                        No.92 Weijin Road, Nankai District, Tianjin, China
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script src="https://2019.igem.org/Team:TJUSLS_China/improve/jquery321js?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Team:TJUSLS_China/improve/featherjs?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Team:TJUSLS_China/improve/bootstrapjs?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Team:TJUSLS_China/improve/scriptsjs?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Team:TJUSLS_China/improve/slickjs?action=raw&ctype=text/javascript"></script>
+
+</html>
