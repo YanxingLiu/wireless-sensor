@@ -1,4 +1,3 @@
-# didactic-guacamole
 A wireless sensor use ESP8266 and STM32
 This is a electronic process pratice project.
 We use STM32 and ESP8266 to establish a wireless sensor based on HTTP.
