@@ -9,5 +9,5 @@ The communication we used between STM32 and esp8266 is Uart communication metion
 
 ESP8266:
 ESP8266 will connect wifi whose ssid and password are flashed to its flash. And arter power on, it will execute init.lua to get information from adc uart. This action can update the information from sensors. And then it will execute httpServer.lua to establish a http server. We designed a html webpage to make the interface more beautiful. And the other guests connected the same wifi can visit URL to get sensor information. But the IP address is still automatically assigned and you have to view your router to get the target IP address. 
- ![image](https://github.com/YanxingLiu/wireless-sensor/master/img/wireless-sensor1.png)
- ![image](https://github.com/YanxingLiu/wireless-sensor/master/img/wireless-sensor.png)
+ ![image](https://github.com/YanxingLiu/wireless-sensor/blob/master/img/wireless-sensor1.png)
+ ![image](https://github.com/YanxingLiu/wireless-sensor/blob/master/img/wireless-sensor.png)
